@@ -5,11 +5,11 @@ using UnityEngine;
 public class CharacterStats : MonoBehaviour
 {
 
-    public int currentHealth;
-    public int maxHealth;
+    public float currentHealth;
+    public float maxHealth;
     
-    public int currentStamina;
-    public int maxStamina;
+    public float currentStamina;
+    public float maxStamina;
 
     public bool isDead;
 
@@ -18,7 +18,7 @@ public class CharacterStats : MonoBehaviour
         isDead = false;
     }
 
-    public void checkHealth()
+    public virtual void checkHealth()
     {
         if (currentHealth >= maxHealth)
         {
@@ -31,7 +31,7 @@ public class CharacterStats : MonoBehaviour
         }
     }
 
-    public void checkStamina()
+    public virtual void checkStamina()
     {
         if (currentStamina >= maxStamina)
         {
@@ -46,6 +46,11 @@ public class CharacterStats : MonoBehaviour
     public virtual void Die()
     {
         //Override
+    }
+    
+    public void takeDamage(float damage)
+    {
+        currentHealth -= damage;
     }
 
 
