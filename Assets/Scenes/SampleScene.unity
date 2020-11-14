@@ -948,6 +948,7 @@ Transform:
 --- !u!114 &2043997220
 MonoBehaviour:
   m_ObjectHideFlags: 0
+<<<<<<< Updated upstream
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -971,3 +972,101 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PlanePrefab: {fileID: 0}
   m_DetectionMode: -1
+=======
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4416056525226494694, guid: a7e654072514b004e95ead80bfada735,
+        type: 3}
+      propertyPath: m_Name
+      value: GameObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333083647797645155, guid: a7e654072514b004e95ead80bfada735,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 23.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333083647797645155, guid: a7e654072514b004e95ead80bfada735,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333083647797645155, guid: a7e654072514b004e95ead80bfada735,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 12.029233
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333083648228888318, guid: a7e654072514b004e95ead80bfada735,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 21.533833
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333083648228888318, guid: a7e654072514b004e95ead80bfada735,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333083648743632496, guid: a7e654072514b004e95ead80bfada735,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -25.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938080559781981026, guid: a7e654072514b004e95ead80bfada735,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.9335814
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938080559781981026, guid: a7e654072514b004e95ead80bfada735,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938080559781981026, guid: a7e654072514b004e95ead80bfada735,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.31254196
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938080559781981026, guid: a7e654072514b004e95ead80bfada735,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938080559781981026, guid: a7e654072514b004e95ead80bfada735,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938080559781981026, guid: a7e654072514b004e95ead80bfada735,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938080559781981026, guid: a7e654072514b004e95ead80bfada735,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938080559781981026, guid: a7e654072514b004e95ead80bfada735,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938080559781981026, guid: a7e654072514b004e95ead80bfada735,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938080559781981026, guid: a7e654072514b004e95ead80bfada735,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938080559781981026, guid: a7e654072514b004e95ead80bfada735,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a7e654072514b004e95ead80bfada735, type: 3}
+>>>>>>> Stashed changes
