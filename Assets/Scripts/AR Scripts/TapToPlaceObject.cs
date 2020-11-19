@@ -26,6 +26,11 @@ public class TapToPlaceObject : MonoBehaviour
     {
         UpdatePlacementPose();
         UpdatePlacementIndicator();
+
+        if (placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            PlaceObject();
+        }
     }
 
     private void PlaceObject()
@@ -56,6 +61,7 @@ public class TapToPlaceObject : MonoBehaviour
         if (placementPoseIsValid)
         {
             PlacementPose = hits[0].pose;
+            
         }
     }
 }
