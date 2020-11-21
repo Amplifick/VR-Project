@@ -416,8 +416,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9ada0598ffb7e8478954c43a9ab1acc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthAmount: {fileID: 0}
-  staminaAmount: {fileID: 0}
+  healthAmount: {fileID: 8683132466376055796}
+  staminaAmount: {fileID: 2334148639329739286}
 --- !u!1 &6797390981852968572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1914,6 +1914,11 @@ PrefabInstance:
     - target: {fileID: 7716471271364908321, guid: a7e654072514b004e95ead80bfada735,
         type: 3}
       propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7716471271364908321, guid: a7e654072514b004e95ead80bfada735,
+        type: 3}
+      propertyPath: m_NavMeshLayer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7806374202233558006, guid: a7e654072514b004e95ead80bfada735,
