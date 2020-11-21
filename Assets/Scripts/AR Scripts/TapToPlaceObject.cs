@@ -16,13 +16,14 @@ public class TapToPlaceObject : MonoBehaviour
     private Pose PlacementPose;
     private ARRaycastManager aRRaycastManager;
     private bool placementPoseIsValid = false;
-    int i;
+    private bool mapShowed;
     
     void Start()
     {
         //arOrigin = FindObjectOfType<ARSessionOrigin>();
         aRRaycastManager = FindObjectOfType<ARRaycastManager>();
-        i = 0;
+        mapShowed = false;
+        
     }
 
     void Update()
@@ -30,9 +31,10 @@ public class TapToPlaceObject : MonoBehaviour
         UpdatePlacementPose();
         UpdatePlacementIndicator();
 
-        if (placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        if (placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && mapShowed == false)
         {
             PlaceObject();
+            mapShowed = true;
         }
     }
 
@@ -61,11 +63,11 @@ public class TapToPlaceObject : MonoBehaviour
         aRRaycastManager.Raycast(screenCenter, hits, TrackableType.Planes);
 
         placementPoseIsValid = hits.Count > 0 ;
-        if (placementPoseIsValid && i < 2)
+        if (placementPoseIsValid)
         {
             PlacementPose = hits[0].pose;
             placementPoseIsValid = false;
-            i++;
+            
             
         }
     }
