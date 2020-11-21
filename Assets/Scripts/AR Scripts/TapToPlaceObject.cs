@@ -6,6 +6,7 @@ using UnityEngine.XR.ARFoundation;
 
 using UnityEngine.XR.ARSubsystems;
 using System;
+using System.Runtime.InteropServices.ComTypes;
 
 public class TapToPlaceObject : MonoBehaviour
 {
@@ -15,11 +16,13 @@ public class TapToPlaceObject : MonoBehaviour
     private Pose PlacementPose;
     private ARRaycastManager aRRaycastManager;
     private bool placementPoseIsValid = false;
-
+    int i;
+    
     void Start()
     {
         //arOrigin = FindObjectOfType<ARSessionOrigin>();
         aRRaycastManager = FindObjectOfType<ARRaycastManager>();
+        i = 0;
     }
 
     void Update()
@@ -57,10 +60,12 @@ public class TapToPlaceObject : MonoBehaviour
         var hits = new List<ARRaycastHit>();
         aRRaycastManager.Raycast(screenCenter, hits, TrackableType.Planes);
 
-        placementPoseIsValid = hits.Count > 0;
-        if (placementPoseIsValid)
+        placementPoseIsValid = hits.Count > 0 ;
+        if (placementPoseIsValid && i < 2)
         {
             PlacementPose = hits[0].pose;
+            placementPoseIsValid = false;
+            i++;
             
         }
     }
