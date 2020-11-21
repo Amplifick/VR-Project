@@ -66,9 +66,7 @@ public class TapToPlaceObject : MonoBehaviour
         if (placementPoseIsValid)
         {
             PlacementPose = hits[0].pose;
-            placementPoseIsValid = false;
-            
-            
+
         }
     }
 }
