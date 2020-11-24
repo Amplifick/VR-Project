@@ -7,7 +7,7 @@ public class WeaponSwitch : MonoBehaviour
     // Start is called before the first frame update
 
     [SerializeField] GameObject primary, secondary;
-    public int weaponSelected;
+    public int weaponSelected ;
         
 
     public void Start()
@@ -20,15 +20,7 @@ public class WeaponSwitch : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        if (weaponSelected !=1)
-        {
-            swapWeapon(1);
-            
-        } else if (weaponSelected !=2)
-        {
-            swapWeapon(2);
-            weaponSelected = 2;
-        }
+        
     }
 
    public void swapWeapon(int weaponType)
@@ -45,6 +37,21 @@ public class WeaponSwitch : MonoBehaviour
             primary.SetActive(false);
             secondary.SetActive(true);
             weaponSelected = 2;
+        }
+    }
+
+
+    public void switchWeapon()
+    {
+        if (weaponSelected != 1)
+        {
+            swapWeapon(1);
+
+        }
+        else if (weaponSelected != 2)
+        {
+            swapWeapon(2);
+           
         }
     }
 }

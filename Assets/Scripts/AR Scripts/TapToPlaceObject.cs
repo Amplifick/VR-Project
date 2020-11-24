@@ -18,6 +18,7 @@ public class TapToPlaceObject : MonoBehaviour
     private bool placementPoseIsValid = false;
     private bool mapShowed;
     
+    
     void Start()
     {
         //arOrigin = FindObjectOfType<ARSessionOrigin>();
@@ -34,6 +35,7 @@ public class TapToPlaceObject : MonoBehaviour
         if (placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && mapShowed == false)
         {
             PlaceObject();
+            
             mapShowed = true;
         }
     }
