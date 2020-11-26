@@ -1,18 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class GameController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    float currScore = 0;
+
+    [SerializeField] Text scoreAmount;
     void Start()
     {
-        
+        currScore = 0;
+        UpdateScoreUI();
+    }
+    
+    public void AddScore(float amount)
+    {
+        currScore += amount;
+        UpdateScoreUI();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void UpdateScoreUI() 
     {
-        
+        scoreAmount.text = currScore.ToString("0");
     }
 }

@@ -28,6 +28,7 @@ public class CharacterStats : MonoBehaviour
         {
             currentHealth = 0;
             isDead = true;
+            Die();
         }
     }
 

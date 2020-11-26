@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyStats : CharacterStats
 {
     //Here goes code to give a certain amount of points when a zombie is killed
-    private float scoreAmount;
+    private float scoreAddAmount = 10;
 
     SpawnZombies spawn;
 
@@ -33,6 +33,8 @@ public class EnemyStats : CharacterStats
 
     public override void Die()
     {
+
+        gameController.AddScore(scoreAddAmount);
 
         //code to give points when the zombie dies needs to be implemented in this part 
         spawn.enemiesKilled++;
