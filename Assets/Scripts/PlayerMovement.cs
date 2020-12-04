@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    protected Joystick joystick;
-    protected JoyButton joybutton;
-    void Start()
-    {
-        joystick = FindObjectOfType<Joystick>();
-        joybutton = FindObjectOfType<JoyButton>();
-    }
+    //public GameObject jugador;
+   // public Animator animator;
+    public Joystick movin;
+    
+
+    private float runSpeed = 2f;
+
+    
+
 
     // Update is called once per frame
     void Update()
     {
         var rigidbody = GetComponent<Rigidbody>();
 
-        rigidbody.velocity = new Vector3(joystick.Horizontal * 100f, rigidbody.velocity.y, joystick.Vertical * 100f);
+        rigidbody.velocity = new Vector3(movin.Horizontal * runSpeed, rigidbody.velocity.y, movin.Vertical * runSpeed);
+
+        //    animator.SetFloat("speed", Mathf.Abs(horizontalMove));
+        //    animator.SetFloat("speed", Mathf.Abs(verticalMove));
     }
 }
