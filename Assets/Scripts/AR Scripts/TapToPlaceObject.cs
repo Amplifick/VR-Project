@@ -7,6 +7,7 @@ using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using System;
 using System.Runtime.InteropServices.ComTypes;
+using UnityEngine.SceneManagement;
 
 public class TapToPlaceObject : MonoBehaviour
 {
@@ -34,7 +35,8 @@ public class TapToPlaceObject : MonoBehaviour
 
         if (placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && mapShowed == false)
         {
-            PlaceObject();
+            
+            SceneManager.LoadScene("SCENE2");
             
             mapShowed = true;
         }
@@ -42,7 +44,12 @@ public class TapToPlaceObject : MonoBehaviour
 
     private void PlaceObject()
     {
-        Instantiate(objectToPlace, PlacementPose.position, PlacementPose.rotation);
+        
+        objectToPlace.SetActive(true);
+        objectToPlace.transform.position = PlacementPose.position;
+        objectToPlace.transform.rotation = PlacementPose.rotation;
+
+
     }
 
     private void UpdatePlacementIndicator()

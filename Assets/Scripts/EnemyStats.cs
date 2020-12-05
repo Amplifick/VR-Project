@@ -10,6 +10,7 @@ public class EnemyStats : CharacterStats
     SpawnZombies spawn;
 
     GameController gameController;
+    
 
     
     void Start()
@@ -29,6 +30,16 @@ public class EnemyStats : CharacterStats
     void Update()
     {
         checkHealth();
+    }
+
+    public void TakeDamage(float amount)
+    {
+        currentHealth -= amount;
+        if (currentHealth <= 0)
+        {
+
+            Die();
+        }
     }
 
     public override void Die()
