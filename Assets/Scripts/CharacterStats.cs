@@ -52,6 +52,7 @@ public class CharacterStats : MonoBehaviour
     public void takeDamage(float damage)
     {
         currentHealth -= damage;
+
     }
 
 

@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public Joystick movin;
     
 
-    private float runSpeed = 2f;
+    private float runSpeed = 5f;
 
     
 

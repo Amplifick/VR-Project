@@ -10,9 +10,11 @@ public class EnemyStats : CharacterStats
     SpawnZombies spawn;
 
     GameController gameController;
-    
 
-    
+   // public float vida = 50f;
+
+
+
     void Start()
     {
         gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();

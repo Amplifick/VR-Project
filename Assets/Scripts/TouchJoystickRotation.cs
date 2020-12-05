@@ -13,7 +13,7 @@ public class TouchJoystickRotation : MonoBehaviour
 	public float daño = 10f;
 	public float rango = 100f;
 	public ParticleSystem efecto;
-	private LineRenderer tiro;
+	//private LineRenderer tiro;
 	public bool FacingRight = true;
 	public AudioSource sonidoD;
 	private WaitForSeconds shotDuration = new WaitForSeconds(.75f);
@@ -71,9 +71,9 @@ public class TouchJoystickRotation : MonoBehaviour
 	private IEnumerator shotEffect()
 	{
 		sonidoD.Play();
-		tiro.enabled = true;
+		//tiro.enabled = true;
 		yield return shotDuration;
-		tiro.enabled = false;
+		//tiro.enabled = false;
 	}
 
 

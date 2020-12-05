@@ -5,7 +5,7 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float vida = 100f;
+    public float vida = 50f;
     //Here goes code to give a certain amount of points when a zombie is killed
     private float scoreAddAmount = 10;
 
@@ -26,16 +26,26 @@ public class Target : MonoBehaviour
         vida -= amount;
         if(vida<= 0)
         {
+
+            
+           // More();
             Muere();
         }
     }
 
+    //void More()
+    //{
+        
+       
+       
+    //}
+
     void Muere()
     {
-        gameController.AddScore(scoreAddAmount);
 
-        //code to give points when the zombie dies needs to be implemented in this part 
         spawn.enemiesKilled++;
+        gameController.AddScore(scoreAddAmount);
         Destroy(gameObject);
+       
     }
 }

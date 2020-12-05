@@ -47,7 +47,7 @@ public class SpawnZombies : MonoBehaviour
     public void startWave()
     {
         waveNumber = 1;
-        enemySpawnAmount = 4;
+        enemySpawnAmount = 2;
         enemiesKilled = 0;
 
         for (int i = 0; i < enemySpawnAmount; i++)
